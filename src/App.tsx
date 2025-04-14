@@ -1,19 +1,20 @@
 import { ThemeConfigContext } from "@cocokits/react-components";
 import { framesXThemeConfig } from '@cocokits/theme-frames-x';
-import { Button, Checkbox } from '@cocokits/react-components';
-import { FormField, Label, Input } from "@cocokits/react-components";
+import { FormField, Label, Input , IconButton , SvgIcon } from "@cocokits/react-components";
+
 import './App.css'
 
 
 function App() {
   return (
     <ThemeConfigContext.Provider value={framesXThemeConfig}>
-          <Button>Hello</Button>
-          <Checkbox>This is a checkbox</Checkbox>
-          <FormField>
-        <Label>place</Label>
-        <Input type="time" required placeholder="Placeholder" />
+     <FormField size="md">
+        <Label>Label</Label>
+        <Input placeholder="Placeholder" />
       </FormField>
+      <IconButton type="default" size="md" color="brand">
+      <SvgIcon icon="YOUR_ICON" />
+    </IconButton>
     </ThemeConfigContext.Provider>
   );
 }
