@@ -1,6 +1,7 @@
-import { ThemeConfigContext } from "@cocokits/react-components";
 import { framesXThemeConfig } from '@cocokits/theme-frames-x';
+import { ThemeConfigContext } from "@cocokits/react-components";
 import { Button, Checkbox , Toggle  } from '@cocokits/react-components';
+import { FormField, Label, ChipList } from "@cocokits/react-components";
 
 import './App.css'
 
@@ -15,6 +16,17 @@ function App() {
       <Toggle type="knob" size="md" labelPosition="before">
         Slide Me!
       </Toggle>
+
+
+      <FormField>
+        <Label>Favorite Foods</Label>
+        <ChipList
+          chips={["Steak", "Pizza"]}
+          size="md"
+          placeholder="Add a new food"
+          addOnBlur={false}
+        ></ChipList>
+      </FormField>
 
     </ThemeConfigContext.Provider>
   );
